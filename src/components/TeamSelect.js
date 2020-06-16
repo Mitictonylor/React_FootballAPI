@@ -10,7 +10,7 @@ function handleSelection(event){
 }
 
 return(
-<select id="team-select" onChange ={handleSelection}>
+<select id="team-select" onChange ={handleSelection} >
 <option>Choose a team...</option>
     {teamOptions}
 </select>
