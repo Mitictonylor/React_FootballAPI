@@ -5,9 +5,12 @@ const TeamSelect = (props) =>{
     return <option value={team.name} key = {index}>{team.name}</option>
   })
 
+function handleSelection(event){
+  props.onSelect(event.target.value)
+}
 
 return(
-<select id="team-select" >
+<select id="team-select" onChange ={handleSelection}>
 <option>Choose a team...</option>
     {teamOptions}
 </select>

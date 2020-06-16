@@ -9,8 +9,12 @@ constructor(props){
       selectedTeam: ""
 
     }
+this.handleSelection = this.handleSelection.bind(this)
   }
 
+handleSelection(team){
+  this.setState({selectedTeam: team})
+}
   componentDidMount(){
     const token = "9b41bcd09c2e4c94baad09aedc40bfc4";
     const url = 'http://api.football-data.org/v2/teams';
@@ -24,7 +28,7 @@ constructor(props){
 
 render(){
   return(
-    <TeamSelect teams={this.state.teams}></TeamSelect>
+    <TeamSelect teams={this.state.teams} onSelect={this.handleSelection}></TeamSelect>
   )
 }
 }
