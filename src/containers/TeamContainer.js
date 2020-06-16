@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from "react";
+import TeamSelect from '../components/TeamSelect.js'
 
 class TeamContainer extends Component{
 constructor(props){
@@ -22,7 +23,9 @@ constructor(props){
 
 
 render(){
-  return( null)
+  return(
+    <TeamSelect teams={this.state.teams}></TeamSelect>
+  )
 }
 }
 export default TeamContainer
